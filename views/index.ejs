@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <section>
+        <div class="container-1">
+            <h1 class="heading"><%= animeName  %></h1>
+            <img class= "item" src="<%= imageLink %>" alt="<%= animeName  %>">
+            <video class="item" id="myVideo">
+                <source src="<%= videoLink  %>" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+        <div class="container-2">
+            <button class= "item-1" onclick="playVid()" type="button">Play Video</button>
+            <button class= "item-1" onclick="pauseVid()" type="button">Pause Video</button> 
+        </div>
+    </section>
+    
+    
+    <script> 
+        let vid = document.getElementById("myVideo"); 
+        
+        function playVid() { 
+          vid.play(); 
+        } 
+        
+        function pauseVid() { 
+          vid.pause(); 
+        } 
+    </script> 
+        
+</body>
+</html>
